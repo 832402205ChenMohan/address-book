@@ -47,7 +47,7 @@ There is a trap in this requirement that is easy to miss. The brief says "each t
 - Cloud deployment address: not deployed (optional +15; the deployment guide is in `docs/DEPLOY.md` — once deployed, put the public address here)
 - Demo video: see section 5
 
-![Repository overview](screenshots/08b-repo-overview.png)
+![Repository overview](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/08b-repo-overview.png)
 
 ## 3. Implementation approach
 
@@ -169,31 +169,31 @@ The suite runs in about two seconds and prints `12 passed`, which is why I was c
 
 ### 4.1 Home page: card grid, statistics strip, favourite badges
 
-![Home page](screenshots/01-home.png)
+![Home page](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/01-home.png)
 
 ### 4.2 Favourites only (bookmark feature, 25 points)
 
-![Favourites filter](screenshots/02-favorites-filter.png)
+![Favourites filter](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/02-favorites-filter.png)
 
 ### 4.3 New contact with several contact methods (10 points)
 
-![New contact dialog](screenshots/03-new-contact-dialog.png)
+![New contact dialog](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/03-new-contact-dialog.png)
 
 ### 4.4 The list after saving, with the confirmation toast
 
-![Contact saved](screenshots/04-contact-saved.png)
+![Contact saved](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/04-contact-saved.png)
 
 ### 4.5 Searching by phone number (proof that contact methods are real data)
 
-![Search by phone](screenshots/05-search-by-phone.png)
+![Search by phone](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/05-search-by-phone.png)
 
 ### 4.6 Import result message (import/export, 25 points)
 
-![Import result](screenshots/06-import-result.png)
+![Import result](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/06-import-result.png)
 
 ### 4.7 After exporting
 
-![After export](screenshots/07-after-export.png)
+![After export](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/07-after-export.png)
 
 > The exported `contacts.xlsx` was checked directly: one header row plus eight contact rows, eleven columns, headers `Name / Company / Title / Notes / Favorite / Phone 1 / Phone 2 / Email 1 / WeChat 1 / Address 1 / Other 1`. Alice Chen's row contains `13800000001 (mobile)` and `alice.chen@example.edu (work)`. The download produced during the recorded run is `screenshots/exported-contacts.xlsx` (a run artefact, not tracked in git).
 
@@ -201,12 +201,12 @@ The suite runs in about two seconds and prints `12 passed`, which is why I was c
 
 Recorded in one take, no editing: open the page → bookmark a contact → create a contact with two methods → search by phone number → import an Excel file → export to Excel.
 
-- `screenshots/demo-run.mp4` — 0.44 MB, roughly 40 seconds, suitable for direct upload
-- `screenshots/demo-run.webm` — the original high-quality recording, playable straight from the repository
+- [demo-run.mp4 (0.44 MB, about 40 s)](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/demo-run.mp4) — the recording used for this submission; it also uploads cleanly into the CSDN editor if an inline player is preferred
+- [demo-run.webm (2.8 MB)](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/demo-run.webm) — the original high-quality recording
 
 ## 6. Git commit history and commit count
 
-![Git commit history](screenshots/08-git-history.png)
+![Git commit history](https://raw.githubusercontent.com/832402205ChenMohan/address-book/main/screenshots/08-git-history.png)
 
 > The screenshot was taken when the history had reached ten commits; two documentation commits ("fill repository links", "refresh git log archive") were added afterwards, so the authoritative list is the `Commits` page: https://github.com/832402205ChenMohan/address-book/commits/main
 

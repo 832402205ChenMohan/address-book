@@ -11,3 +11,5 @@ data/*.db-journal
 .DS_Store
 Thumbs.db
 .pytest_cache/
+preview-blog.html
+preview-shot.png
