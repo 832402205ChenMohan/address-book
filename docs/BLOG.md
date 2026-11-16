@@ -211,7 +211,7 @@ CREATE TABLE contact_methods (
 
 > **待补图**：把 GitHub 仓库 `Commits` 页面（显示 `7 commits`，点进去能看到提交列表与作者）截图后保存为 `screenshots/08-git-history.png`，再替换本段为 `![Git 提交历史](screenshots/08-git-history.png)`。
 
-`8` 次提交，贡献者只有我一人，提交次数统计：`8`（个人项目，以仓库首页显示的实际数字为准）。
+提交次数统计：个人项目，全部提交由我完成（占比 100%）；具体次数以 GitHub 仓库首页 `commits` 显示为准，完整列表（含每次改动文件与行数）见 `docs/git-log.txt`。
 
 完整的本地提交记录（含每次提交改动的文件与行数）保存在 `docs/git-log.txt`，可直接作为附件或截图引用。
 
