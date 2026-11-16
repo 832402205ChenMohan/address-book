@@ -1,6 +1,8 @@
 # 极限编程作业 —— 通讯录（Flask + SQLite + Excel 导入导出）
 
 > 软工 2601 班 / 福州大学—梅努斯国际工程学院 · 个人项目
+>
+> **发布前请替换**：`{{学号}}`、`{{REPO_URL}}`、`{{DEPLOY_URL}}`；把 `screenshots/` 里的图片用 CSDN 编辑器「上传图片」重新插入（相对路径在 CSDN 不显示）；补上第六、七节标注为「待补图」的两张截图。
 
 ## 作业说明表
 
@@ -193,19 +195,25 @@ CREATE TABLE contact_methods (
 
 ![导出](screenshots/07-after-export.png)
 
-> 导出的 `contacts.xlsx` 列结构见 3.4 的表格；如需原件可在仓库 `screenshots/` 下查看 Playwright 自动下载的那份。
+> 导出的 `contacts.xlsx` 真实结构已核对：1 行表头 + 8 行联系人、11 列，表头依次为
+> `Name / Company / Title / Notes / Favorite / Phone 1 / Phone 2 / Email 1 / WeChat 1 / Address 1 / Other 1`；
+> 其中 Alice Chen 一行导出的值为 `13800000001 (mobile)`、`alice.chen@example.edu (work)`。
+> 原始文件见 `screenshots/exported-contacts.xlsx`（Playwright 自动下载的运行产物，未纳入版本库）。
 
 ## 五、完整运行视频
 
 演示顺序：打开首页 → 收藏一个人 → 新建一个带两种联系方式的联系人 → 按手机号搜索 → 导入 Excel → 导出 Excel。
 
-视频文件：`screenshots/demo-run.webm`（仓库内可直接播放；CSDN 上传建议先转 mp4）
+- `screenshots/demo-run.mp4`（0.44 MB，约 40 秒，CSDN 可直接上传）
+- `screenshots/demo-run.webm`（高清原片，仓库内可直接播放）
 
 ## 六、Git 提交历史与提交次数
 
-![Git 提交历史](screenshots/08-git-history.png)
+> **待补图**：把 GitHub 仓库 `Commits` 页面（显示 `7 commits`，点进去能看到提交列表与作者）截图后保存为 `screenshots/08-git-history.png`，再替换本段为 `![Git 提交历史](screenshots/08-git-history.png)`。
 
-`{{COMMIT_COUNT}}` 次提交，贡献者只有我一人，提交次数统计：`{{MY_COMMIT_COUNT}}`。
+`7` 次提交，贡献者只有我一人，提交次数统计：`7`（个人项目）<!-- 换成截图里的真实数字 -->。
+
+完整的本地提交记录（含每次提交改动的文件与行数）保存在 `docs/git-log.txt`，可直接作为附件或截图引用。
 
 提交是按功能拆的，不是一次性推上去：
 
@@ -223,9 +231,9 @@ docs: add readme, code standard and deployment guide
 
 部署方案写在仓库 `docs/DEPLOY.md`：Ubuntu 22.04 + gunicorn（systemd 托管）+ nginx 反向代理 80 端口。
 
-![云部署访问](screenshots/09-cloud-deploy.png)
+> **待补图**：`{{DEPLOY_URL}}` 打开后，把**浏览器地址栏含公网 IP/域名**的整页截图保存为 `screenshots/09-cloud-deploy.png`，再替换本段为图片。没有部署就把本节和第十节「云部署」一行改成「未做（可选加分项）」。
 
-访问地址：`{{DEPLOY_URL}}`（注意：`localhost` 不算云部署，这份截图里地址栏是公网 IP）
+访问地址：`{{DEPLOY_URL}}`（注意：`localhost` 不算云部署，截图里地址栏必须是公网 IP 或域名）
 
 ## 八、PSP 表格
 

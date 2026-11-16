@@ -1,0 +1,88 @@
+﻿29ffbbb | 2026-11-16 16:31 | 832402205ChenMohan | docs: add readme, blog draft, psp and deployment guide
+7f99fd7 | 2026-11-16 16:31 | 832402205ChenMohan | test: cover api behaviour and excel round trip
+f020125 | 2026-11-16 16:31 | 832402205ChenMohan | feat(excel): export workbook and import with merge rule
+72f1279 | 2026-11-16 16:31 | 832402205ChenMohan | feat(ui): build card grid, dialog form and toast feedback
+c56b14a | 2026-11-16 16:31 | 832402205ChenMohan | feat(api): expose contact CRUD and favorite endpoints
+1f8489b | 2026-11-16 16:31 | 832402205ChenMohan | feat(db): add sqlite schema and contact model
+a12fcad | 2026-11-16 16:31 | 832402205ChenMohan | chore: scaffold address book project
+commit 29ffbbb
+author 832402205ChenMohan <your-email@example.com>
+date 2026-11-16 16:31:16 +0800
+
+    docs: add readme, blog draft, psp and deployment guide
+
+ README.md                             |  85 +++++++++++
+ docs/BLOG.md                          | 274 ++++++++++++++++++++++++++++++++++
+ docs/CODE_STANDARD.md                 |  30 ++++
+ docs/DEPLOY.md                        | 117 +++++++++++++++
+ docs/STEP-BY-STEP.md                  | 140 +++++++++++++++++
+ screenshots/01-home.png               | Bin 0 -> 198399 bytes
+ screenshots/02-favorites-filter.png   | Bin 0 -> 165826 bytes
+ screenshots/03-new-contact-dialog.png | Bin 0 -> 186030 bytes
+ screenshots/04-contact-saved.png      | Bin 0 -> 228798 bytes
+ screenshots/05-search-by-phone.png    | Bin 0 -> 150832 bytes
+ screenshots/06-import-result.png      | Bin 0 -> 216120 bytes
+ screenshots/07-after-export.png       | Bin 0 -> 208794 bytes
+ screenshots/demo-run.webm             | Bin 0 -> 2952423 bytes
+ scripts/shoot.py                      | 175 ++++++++++++++++++++++
+ 14 files changed, 821 insertions(+)
+
+commit 7f99fd7
+author 832402205ChenMohan <your-email@example.com>
+date 2026-11-16 16:31:16 +0800
+
+    test: cover api behaviour and excel round trip
+
+ tests/test_app.py | 200 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 200 insertions(+)
+
+commit f020125
+author 832402205ChenMohan <your-email@example.com>
+date 2026-11-16 16:31:16 +0800
+
+    feat(excel): export workbook and import with merge rule
+
+ excel_io.py              | 260 +++++++++++++++++++++++++++++++++++++++++++++++
+ samples/import-demo.xlsx | Bin 0 -> 5276 bytes
+ scripts/seed_demo.py     |  91 +++++++++++++++++
+ 3 files changed, 351 insertions(+)
+
+commit 72f1279
+author 832402205ChenMohan <your-email@example.com>
+date 2026-11-16 16:31:15 +0800
+
+    feat(ui): build card grid, dialog form and toast feedback
+
+ static/css/style.css | 679 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ static/js/app.js     | 407 ++++++++++++++++++++++++++++++
+ templates/index.html | 108 ++++++++
+ 3 files changed, 1194 insertions(+)
+
+commit c56b14a
+author 832402205ChenMohan <your-email@example.com>
+date 2026-11-16 16:31:15 +0800
+
+    feat(api): expose contact CRUD and favorite endpoints
+
+ app.py    | 148 ++++++++++++++++++++++++++++++++++++++++++
+ models.py | 220 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 368 insertions(+)
+
+commit 1f8489b
+author 832402205ChenMohan <your-email@example.com>
+date 2026-11-16 16:31:15 +0800
+
+    feat(db): add sqlite schema and contact model
+
+ database.py | 53 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 53 insertions(+)
+
+commit a12fcad
+author 832402205ChenMohan <your-email@example.com>
+date 2026-11-16 16:31:14 +0800
+
+    chore: scaffold address book project
+
+ .gitignore       | 13 +++++++++++++
+ requirements.txt |  2 ++
+ 2 files changed, 15 insertions(+)
