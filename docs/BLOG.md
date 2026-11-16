@@ -211,7 +211,7 @@ CREATE TABLE contact_methods (
 
 > **待补图**：把 GitHub 仓库 `Commits` 页面（显示 `7 commits`，点进去能看到提交列表与作者）截图后保存为 `screenshots/08-git-history.png`，再替换本段为 `![Git 提交历史](screenshots/08-git-history.png)`。
 
-`7` 次提交，贡献者只有我一人，提交次数统计：`7`（个人项目）<!-- 换成截图里的真实数字 -->。
+`8` 次提交，贡献者只有我一人，提交次数统计：`8`（个人项目，以仓库首页显示的实际数字为准）。
 
 完整的本地提交记录（含每次提交改动的文件与行数）保存在 `docs/git-log.txt`，可直接作为附件或截图引用。
 
@@ -224,7 +224,8 @@ feat(api): expose contact CRUD and favorite endpoints
 feat(ui): build card grid, dialog form and toast feedback
 feat(excel): export workbook and import with merge rule
 test: cover api behaviour and excel round trip
-docs: add readme, code standard and deployment guide
+docs: add readme, blog draft, psp and deployment guide
+docs: add mp4 demo video, git log archive and blog placeholders
 ```
 
 ## 七、云部署（可选加分项）
