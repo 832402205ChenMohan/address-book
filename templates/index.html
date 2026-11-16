@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Address Book</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">AB</div>
+        <div class="brand-text">
+          <h1>Address Book</h1>
+          <p class="subtitle">Bookmark the people who matter. Keep every way to reach them.</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <input id="import-input" type="file" accept=".xlsx" hidden>
+        <button type="button" class="btn ghost" id="btn-import">Import Excel</button>
+        <button type="button" class="btn ghost" id="btn-export">Export Excel</button>
+        <button type="button" class="btn primary" id="btn-new">New Contact</button>
+      </div>
+    </header>
+
+    <section class="filters">
+      <div class="search">
+        <span class="search-icon" aria-hidden="true">&#9906;</span>
+        <input id="search" type="search" placeholder="Search name, company or any phone / email" autocomplete="off">
+      </div>
+      <button type="button" class="chip" id="btn-favorites" aria-pressed="false">
+        <span class="chip-star" aria-hidden="true">&#9733;</span> Favorites only
+      </button>
+      <span class="counter" id="counter">0 contacts</span>
+    </section>
+
+    <section class="stats" id="stats">
+      <div class="stat"><span class="stat-value" id="stat-contacts">0</span><span class="stat-label">Contacts</span></div>
+      <div class="stat"><span class="stat-value" id="stat-favorites">0</span><span class="stat-label">Favorites</span></div>
+      <div class="stat"><span class="stat-value" id="stat-methods">0</span><span class="stat-label">Contact methods</span></div>
+    </section>
+
+    <main class="grid" id="list" aria-live="polite"></main>
+
+    <section class="empty hidden" id="empty">
+      <div class="empty-art" aria-hidden="true">&#9734;</div>
+      <h2>No contacts to show</h2>
+      <p>Create a contact, import an Excel file, or clear the current filters.</p>
+    </section>
+
+    <footer class="page-foot">
+      <span>Software Engineering assignment demo &middot; Flask + SQLite + openpyxl</span>
+      <a href="/api/template">Download Excel template</a>
+    </footer>
+  </div>
+
+  <dialog class="dialog" id="contact-dialog">
+    <form id="contact-form" autocomplete="off">
+      <header class="dialog-head">
+        <h2 id="dialog-title">New Contact</h2>
+        <button type="button" class="icon-btn" id="btn-close" aria-label="Close">&#215;</button>
+      </header>
+      <div class="dialog-body">
+        <input type="hidden" id="f-id">
+        <div class="field-row">
+          <label class="field">
+            <span>Name *</span>
+            <input id="f-name" required maxlength="60" placeholder="e.g. Alice Chen">
+          </label>
+          <label class="field">
+            <span>Company</span>
+            <input id="f-company" maxlength="80" placeholder="e.g. Fuzhou University">
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Title</span>
+            <input id="f-title" maxlength="80" placeholder="e.g. Lecturer">
+          </label>
+          <label class="field checkbox">
+            <input type="checkbox" id="f-favorite">
+            <span>Add to favorites</span>
+          </label>
+        </div>
+        <label class="field">
+          <span>Notes</span>
+          <textarea id="f-notes" rows="2" maxlength="400" placeholder="Anything worth remembering"></textarea>
+        </label>
+
+        <div class="methods-head">
+          <span>Contact methods</span>
+          <button type="button" class="btn small" id="btn-add-method">+ Add method</button>
+        </div>
+        <div class="methods" id="methods"></div>
+      </div>
+      <footer class="dialog-foot">
+        <button type="button" class="btn ghost" id="btn-cancel">Cancel</button>
+        <button type="submit" class="btn primary" id="btn-save">Save contact</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
