@@ -213,6 +213,8 @@ CREATE TABLE contact_methods (
 
 ![Git 提交历史](screenshots/08-git-history.png)
 
+> 截图取自提交历史进行到第 10 次时的仓库页面；此后又补了「填入仓库链接」「刷新 git 记录」两次文档提交，最新提交列表以仓库 `Commits` 页面为准（`https://github.com/832402205ChenMohan/address-book/commits/main`）。
+
 提交记录：`main` 分支的全部提交均由我完成（个人项目，贡献占比 100%），提交次数见上方截图与仓库首页的 `commits` 计数；完整的本地记录（含每次改动的文件与行数）另存于 `docs/git-log.txt`。
 
 提交是按功能拆的，不是一次性推上去：
