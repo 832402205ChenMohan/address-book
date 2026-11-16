@@ -2,7 +2,7 @@
 
 > 软工 2601 班 / 福州大学—梅努斯国际工程学院 · 个人项目
 >
-> **发布前请替换**：`{{学号}}`、`{{REPO_URL}}`、`{{DEPLOY_URL}}`；把 `screenshots/` 里的图片用 CSDN 编辑器「上传图片」重新插入（相对路径在 CSDN 不显示）；补上第六、七节标注为「待补图」的两张截图。
+> **发布前请替换**：`{{学号}}`（其余占位符已填好：GitHub 仓库地址已写入本文）；把 `screenshots/` 里的图片用 CSDN 编辑器「上传图片」重新插入（相对路径在 CSDN 不显示）；云部署为可选项，若不做，第七节保持现状即可。
 
 ## 作业说明表
 
@@ -12,7 +12,7 @@
 | 团队名称 | 个人项目（陈墨瀚，学号：`{{学号}}`） |
 | 作业要求 | 极限编程（Extreme Programming）：实现通讯录的收藏联系人、一个联系人多种联系方式、Excel 导入导出；可选云部署 |
 | 本次作业的目标 | 在 4 天窗口内独立走完"需求拆分 → 设计 → 编码 → 测试 → 部署 → 文档"的完整流程，重点验证能否把需求逐条落成可验收的功能点，并用自动化测试与截图证明结果可复现 |
-| 其他参考资料 | GitHub 仓库：`{{REPO_URL}}`；代码规范：`{{REPO_URL}}/blob/main/docs/CODE_STANDARD.md`；Flask 官方文档；openpyxl 官方文档 |
+| 其他参考资料 | GitHub 仓库：https://github.com/832402205ChenMohan/address-book ；代码规范：https://github.com/832402205ChenMohan/address-book/blob/main/docs/CODE_STANDARD.md ；Flask 官方文档；openpyxl 官方文档 |
 
 ## 目录
 
@@ -44,9 +44,11 @@
 
 ## 二、项目地址
 
-- GitHub 仓库：`{{REPO_URL}}`
-- 云部署访问地址：`{{DEPLOY_URL}}`（可选加分项，未做则写"未部署，本地 127.0.0.1 运行"）
-- 代码规范文档：`{{REPO_URL}}/blob/main/docs/CODE_STANDARD.md`
+- GitHub 仓库：https://github.com/832402205ChenMohan/address-book
+- 云部署访问地址：未部署（可选加分项 +15，部署方案见仓库 `docs/DEPLOY.md`；完成后把公网地址填到这里）
+- 代码规范文档：https://github.com/832402205ChenMohan/address-book/blob/main/docs/CODE_STANDARD.md
+
+![仓库概览](screenshots/08b-repo-overview.png)
 - 演示视频：见第五节
 
 ## 三、功能实现思路
@@ -209,11 +211,9 @@ CREATE TABLE contact_methods (
 
 ## 六、Git 提交历史与提交次数
 
-> **待补图**：把 GitHub 仓库 `Commits` 页面（显示 `7 commits`，点进去能看到提交列表与作者）截图后保存为 `screenshots/08-git-history.png`，再替换本段为 `![Git 提交历史](screenshots/08-git-history.png)`。
+![Git 提交历史](screenshots/08-git-history.png)
 
-提交次数统计：个人项目，全部提交由我完成（占比 100%）；具体次数以 GitHub 仓库首页 `commits` 显示为准，完整列表（含每次改动文件与行数）见 `docs/git-log.txt`。
-
-完整的本地提交记录（含每次提交改动的文件与行数）保存在 `docs/git-log.txt`，可直接作为附件或截图引用。
+提交记录：`main` 分支的全部提交均由我完成（个人项目，贡献占比 100%），提交次数见上方截图与仓库首页的 `commits` 计数；完整的本地记录（含每次改动的文件与行数）另存于 `docs/git-log.txt`。
 
 提交是按功能拆的，不是一次性推上去：
 
@@ -226,15 +226,18 @@ feat(excel): export workbook and import with merge rule
 test: cover api behaviour and excel round trip
 docs: add readme, blog draft, psp and deployment guide
 docs: add mp4 demo video, git log archive and blog placeholders
+docs: align blog commit count with repository history
+docs: state the contributor count without a fixed number
 ```
 
 ## 七、云部署（可选加分项）
 
 部署方案写在仓库 `docs/DEPLOY.md`：Ubuntu 22.04 + gunicorn（systemd 托管）+ nginx 反向代理 80 端口。
 
-> **待补图**：`{{DEPLOY_URL}}` 打开后，把**浏览器地址栏含公网 IP/域名**的整页截图保存为 `screenshots/09-cloud-deploy.png`，再替换本段为图片。没有部署就把本节和第十节「云部署」一行改成「未做（可选加分项）」。
+> **本节状态：未部署（可选项，不计入基础分）**。部署前置是有一台公网服务器或 Render/Railway 账号，代码侧不需要改动：`app.py` 末尾已导出 `app` 对象，可直接 `gunicorn app:app`。
+> 若之后完成部署，把公网地址填到上一节的「云部署访问地址」，并把浏览器地址栏含公网 IP/域名 的整页截图存为 `screenshots/09-cloud-deploy.png` 插入本段。
 
-访问地址：`{{DEPLOY_URL}}`（注意：`localhost` 不算云部署，截图里地址栏必须是公网 IP 或域名）
+访问地址：未部署（注意：`localhost` / `127.0.0.1` 不算云部署，必须是公网 IP 或域名）
 
 ## 八、PSP 表格
 
